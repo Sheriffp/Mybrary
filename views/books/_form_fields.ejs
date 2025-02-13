@@ -5,7 +5,7 @@
 <div>
   <label>Author</label>
   <select name="author">
-    <% for (const author of authors) { %> <% if (author.id === book.author) { %>
+    <% for (const author of authors) { %> <% if (author.id == book.author) { %>
     <option
       selected
       label="<%= author.name %>"

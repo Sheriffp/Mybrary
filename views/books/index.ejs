@@ -17,6 +17,8 @@
 </form>
 <div>
   <% for (const book of books) { %>
-  <img height="150" width="100" src="<%= book.coverImagePath %>" />
+  <a href="/books/<%= book.id %>">
+    <img height="150" width="100" src="<%= book.coverImagePath %>" />
+  </a>
   <% } %>
 </div>
