@@ -11,11 +11,13 @@
   </div>
 </form>
 <br />
-<% for (const author of authors) { %> <%= author.name %>
-<div class="form-row-end btn-row">
-  <a class="btn btn-primary" href="/authors/<%= author.id %>">View</a>
-  <a class="btn btn-primary" href="/authors/<%= author.id %>/edit">Edit</a>
-  <%- include("../partials/deleteForm", { url: `/authors/${author.id}` }) %>
+<% for (const author of authors) { %>
+<div class="author-row">
+  <div class="author-name"><%= author.name %></div>
+  <div class="btn-row">
+    <a class="btn btn-primary" href="/authors/<%= author.id %>">View</a>
+    <a class="btn btn-primary" href="/authors/<%= author.id %>/edit">Edit</a>
+    <%- include("../partials/deleteForm", { url: `/authors/${author.id}` }) %>
+  </div>
 </div>
-
 <% } %>
